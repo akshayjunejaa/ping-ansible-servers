@@ -4,3 +4,27 @@
   tasks:
     - name: Ping the servers
       ansible.builtin.ping:
+        
+  inventory:
+    all:
+      children:
+        group_1:
+          hosts:
+            192.168.1.125:
+              ansible_host: 192.168.1.125
+              ansible_user: tushar
+            192.168.1.54:
+              ansible_host: 192.168.1.54
+              ansible_user: akshay
+            192.168.1.15:
+              ansible_host: 192.168.1.15
+              ansible_user: mohan
+            192.168.1.17:
+              ansible_host: 192.168.1.17
+              ansible_user: harmanjot
+            192.168.1.27:
+              ansible_host: 192.168.1.27
+              ansible_user: bharat
+            192.168.1.31:
+              ansible_host: 192.168.1.31
+              ansible_user: seshank
