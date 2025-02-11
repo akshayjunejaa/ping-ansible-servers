@@ -1,20 +1,14 @@
----
-- name: Ping servers
-  hosts: all
-  tasks:
-    - name: Ping the servers
-      ansible.builtin.ping:
-        
-  inventory:
-    all:
-      children:
-        group_1:
-          hosts:
-            192.168.1.125:
-              ansible_host: 192.168.1.125
-            192.168.1.54:
-              ansible_host: 192.168.1.54
-            192.168.1.15:
-              ansible_host: 192.168.1.15
-            192.168.1.17:
-              ansible_host: 192.168.1.17
+all:
+  children:
+    ping_test_servers:
+      hosts:
+        192.168.1.125: {}
+        192.168.1.54: {}
+        192.168.1.15: {}
+        192.168.1.17: {}
+        192.168.1.27: {}
+        192.168.1.31: {}
+        192.168.1.32: {}
+        192.168.1.33: {}
+        ...
+
